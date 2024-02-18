@@ -67,5 +67,5 @@ app.use(notFound);
 app.use(errorHandler);
 
 httpServer.listen(process.env.PORT, () => {
-  console.log(`App are listening on Port:3000 `);
+  console.log(`App are listening on Port:${PORT} `);
 });
