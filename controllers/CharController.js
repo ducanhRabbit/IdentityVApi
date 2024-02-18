@@ -6,7 +6,6 @@ class CharController {
     try {
       const { page, limit } = req.query;
       const skip = (page - 1) * limit;
-      console.log(1)
       const count = await Character.find();
       const characters = await Character.find()?.skip(skip)?.limit(limit);
       res.set("X-total-count", count.length);
