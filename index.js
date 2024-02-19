@@ -6,7 +6,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
 const { createServer } = require("http");
-const PORT = process.env.PORT;
 const db = require("./config/db/db");
 const { errorHandler, notFound } = require("./middlewares/ErrorHandler");
 const cookieParser = require("cookie-parser");
@@ -67,5 +66,5 @@ app.use(notFound);
 app.use(errorHandler);
 
 httpServer.listen(process.env.PORT, () => {
-  console.log(`App are listening on Port:${PORT} `);
+  console.log(`App are listening on Port:${process.env.PORT} `);
 });
